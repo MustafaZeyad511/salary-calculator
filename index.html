@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salary Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="Dogan Logo.png" alt="Dogan Voyages Logo" class="logo">
+      <h1>Calculate Salary</h1>
+    </div>
+    <h2>Salary Calculator</h2>
+
+    <div class="main-content">
+      <div class="employee-list">
+        <h3>Employee List</h3>
+        <select id="employeeSelect" class="employee-select">
+          <option value="">Select Employee</option>
+        </select>
+      </div>
+
+      <div class="period-section">
+        <div class="input-group">
+          <label for="month">Month:</label>
+          <select id="month" class="month-select">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="year">Year:</label>
+          <select id="year" class="year-select">
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="input-section">
+        <div class="input-group">
+          <label for="hours">Hours Worked:</label>
+          <input type="number" id="hours" class="input-field" min="0" placeholder="Enter hours worked">
+        </div>
+        <div class="input-group">
+          <label for="rate">Hourly Rate:</label>
+          <input type="number" id="rate" class="input-field" min="0" placeholder="Auto-filled" readonly>
+        </div>
+      </div>
+
+      <div class="result-section">
+        <div class="print-controls">
+          <button id="printButton" class="print-button">Print Salary Slip</button>
+        </div>
+        <h3>Gross Salary ($)</h3>
+        <div class="salary-display">
+          <span id="grossSalary">0.00</span> $
+        </div>
+
+        <div class="deductions-section">
+          <div class="deduction-item">
+            <span>Contingencies (4.83%)</span>
+            <span id="contingencies">0.00</span>
+          </div>
+          <div class="deduction-item">
+            <span>Training (0.10%)</span>
+            <span id="training">0.00</span>
+          </div>
+          <div class="deduction-item">
+            <span>Unemployment (1.55%)</span>
+            <span id="unemployment">0.00</span>
+          </div>
+          <div class="deduction-item">
+            <span>IRPF Tax</span>
+            <span id="irpf">0.00</span>
+          </div>
+          <div class="deduction-item total">
+            <span>Total Deductions</span>
+            <span id="totalDeductions">0.00</span>
+          </div>
+          <div class="deduction-item net">
+            <span>Net Salary</span>
+            <span id="netSalary">0.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
